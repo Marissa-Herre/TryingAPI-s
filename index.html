@@ -11,7 +11,7 @@ body {
   width: 100px;
   height: 70px;
   padding: 10px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid white;
   p {
   background-image: "images/Cup.png" width="50" height="70";
   }
@@ -36,6 +36,7 @@ function dropHandler(ev) {
 <body>
 
 <p>Testing the drag and drop stuff</p>
+<h1>Juice time</h1>
 
 
 <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
@@ -46,6 +47,36 @@ function dropHandler(ev) {
 
 <img id="img1" src="images/Juice.png" draggable="true" ondragstart="dragstartHandler(event)" width="50" height="70">
 
+
+
+
+<h1>Geolocation test</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Coords</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
 </body>
 </html>
 
