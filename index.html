@@ -2,12 +2,13 @@
 <html>
 <head>
 <style>
+
 #div1 {
-  width: 350px;
   height: 70px;
   padding: 10px;
   border: 1px solid #aaaaaa;
-  position: center;
+style="background-image: images/cup.png;">
+
 }
 </style>
 <script>
@@ -30,13 +31,14 @@ function dropHandler(ev) {
 
 <p>Testing the drag and drop stuff</p>
 
-
+<div class="flex-container">
 <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
 <p></p>
 
 <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
 <br>
-<img id="img1" src="images/Juice.png" draggable="true" ondragstart="dragstartHandler(event)" width="100" height="130">
+
+<img id="img1" src="images/Juice.png" draggable="true" ondragstart="dragstartHandler(event)" width="50" height="70">
 
 </body>
 </html>
