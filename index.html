@@ -3,20 +3,20 @@
 <head>
 <style>
 
-body {
+.flex-container {
   background-image: url("images/Cup.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left 17px top 153px;
 }
 
-body {
+.flex-container {
   background-color: pink;
   color: white;
 
 }
 
-#div1 {
+.flex-container > #div1 {
   width: 100px;
   height: 70px;
   padding: 10px;
@@ -45,9 +45,9 @@ function dropHandler(ev) {
 <p>Testing the drag and drop stuff</p>
 <h1>Juice time</h1>
 
-
+<div class="flex-container">
 <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
-<p></p>
+<p></p></div>
 
 
 <img id="img1" src="images/Juice.png" draggable="true" ondragstart="dragstartHandler(event)" width="50" height="70">
